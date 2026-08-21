@@ -1,27 +1,27 @@
-# Kubernetes Runtime Threat Detection (Falco eBPF Rules & Hardening)
+# ☸️ Kubernetes Runtime Threat Detection (Falco eBPF Rules & Hardening)
 
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/toprakahmetaydogmus/11-k8s-runtime-security-falco?color=blue&label=Release)](https://github.com/toprakahmetaydogmus/11-k8s-runtime-security-falco/releases)
-[![Monorepo](https://img.shields.io/badge/Monorepo-cybersecurity--ecosystem-orange.svg)](https://github.com/toprakahmetaydogmus/cybersecurity-ecosystem)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![CI Quality Gate](https://github.com/toprakahmetaydogmus/11-k8s-runtime-security-falco/actions/workflows/ci.yml/badge.svg)](https://github.com/toprakahmetaydogmus/11-k8s-runtime-security-falco/actions)
-[![Falco](https://img.shields.io/badge/Runtime-Falco%20eBPF-teal.svg)](#)
 
-Geliştirici: **Toprak Ahmet Aydoğmuş**
-
-Kubernetes konteyner çalışma zamanında (runtime) yetkisiz kabuk çalıştırma, hassas dosya okuma ve ayrıcalık yükseltme eylemlerini tespit eden kural motoru.
+Developer: **Toprak Ahmet Aydoğmuş**
 
 ---
 
-## ⚡ Hızlı Başlangıç
+## 🎯 1. Overview
+Kubernetes runtime security engine modeling eBPF kernel event detection via Falco rules. Detects container escapes, sensitive mount access (`/proc`, `/sys`), ServiceAccount token misuse, and unauthorized process spawning.
+
+---
+
+## 🚀 2. Quick Start
 
 ```bash
 git clone https://github.com/toprakahmetaydogmus/11-k8s-runtime-security-falco.git
 cd 11-k8s-runtime-security-falco
-
-python scripts/test_falco_rules.py
+python -m unittest discover tests/
 ```
 
 ---
 
-## 📜 Lisans
-MIT License - **Toprak Ahmet Aydoğmuş**
+## 📜 3. License
+Licensed under the [MIT License](LICENSE).  
+Developer: **Toprak Ahmet Aydoğmuş**.
